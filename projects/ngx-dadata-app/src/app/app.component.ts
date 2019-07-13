@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { DadataConfig, DadataType} from '@kolkov/ngx-dadata';
+import { DadataConfig } from '../../../ngx-dadata/src/lib/dadata-config';
+import { DadataType} from '../../../ngx-dadata/src/lib/ngx-dadata.service';
 
 @Component({
   selector: 'app-root',
@@ -14,5 +15,9 @@ export class AppComponent  {
   configFio: DadataConfig = {
     apiKey: '2e51c5fbc1a60bd48face95951108560bf03f7d9',
     type: DadataType.fio,
+  };
+  configCompany: DadataConfig = {
+    apiKey: '2e51c5fbc1a60bd48face95951108560bf03f7d9',
+    type: DadataType.party,
   };
 }

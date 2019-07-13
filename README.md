@@ -8,6 +8,9 @@ Angular 6+ [DaData][dadata] suggestion (подсказки) implementation
 
 ## Getting Started
 
+### Changes
+Add address subline in company search
+
 ### Demo
 Demo is here [demo][demo]
 

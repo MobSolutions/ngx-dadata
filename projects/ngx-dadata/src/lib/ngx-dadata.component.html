@@ -1,12 +1,16 @@
 <div class="autocomplete">
   <label for="address_input"></label>
-  <input [disabled]="disabled  ? true : null" type="text" id="address_input" name="address" class="search" #inputValue (input)="getData(inputValue.value)"
+  <input [disabled]="disabled  ? true : null" type="text" class="primary-input" #inputValue (input)="getData(inputValue.value)"
          [placeholder]="placeholder" (keyup.ArrowDown)="onArrowDown()" (keyup.ArrowUp)="onArrowUp()"
          (keyup.Enter)="onEnter()" spellcheck="false" [(ngModel)]="value" autocomplete="new-password" />
   <div *ngIf="data.length">
     <div class="autocomplete-items">
       <div class="autocomplele-item" *ngFor="let item of data;let i = index" (click)="onClick($event, item)" [id]="i+'item'">
         {{item.value}}
+        <ng-template [ngIf]="type==='party'">
+          <br/>
+          <span>{{item.data?.inn}} {{item.data?.address?.value}}</span>
+        </ng-template>
       </div>
     </div>
   </div>
